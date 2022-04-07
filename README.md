@@ -5,4 +5,3 @@ Need to update:
 - Teemo Module
 - Soraka Module
 - Taric Module
-- League Config Files
