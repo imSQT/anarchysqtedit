@@ -1,0 +1,2 @@
+Copy a file from here to the main bot folder (where _anarchy.ahk "lives").
+It must be renamed to "config.ini", replace the old file.

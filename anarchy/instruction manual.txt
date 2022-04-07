@@ -1,0 +1,131 @@
+[ BOT SET UP + COMMANDS ]
+
+► Hello Summoner, you found the readme file - congratulations!
+Anarchy can be used not only to level accounts but also to decrease MMR in normals and ranked on summoners rift (also known as deranking!)
+Unlike most bots, Anarchy functions differently and clings to a human player to participate in the game, it will not move on its own nor make own decisions. This leads
+to less pattern-like behavior but a rather unpredictable bot that is very sticky but tries its best to support the (human) player it sticks to.
+
+► (WINDOWS-KEY)+(K) will bring up a little popup window that displays the bot's current stats/information, after closing the window the bot will continue (acts as a pause)
+► (ALT)+(O) will stop the bot
+► Holding (i) ingame will cause the bot to stop playing after the game ends.
+
+► As soon as you start it, the bot takes the wheel and will start playing just like a human would, it clicks on things in the client etc...
+  Please do not move the mouse or use the keyboard while it is playing, pause the bot first and close the pause-window to resume.
+
+► Yuumi is the best champion for deranking as it is hard to spot that it is infact a bot.
+
+
+
+
+[ INSTALLATION ]
+Tutorial: https://www.youtube.com/watch?v=m2XSlQ0QchQ
+
+► Install Autohotkey (from autohotkey.com, official and trustworthy source, take "Current Version")
+
+Windows Settings (IMPORTANT!!!)
+Cleartext is enabled and all pre-selected options are taken (clicking "Next" each option)?
+No external color settings applied? (NVidia for example)
+
+Navigate to System settings and go to "Display" ► Set scale of Text, Apps and other Elements to 100% (default), Screen resolution should be 1920x1080!
+
+► After extracting all of the files from the downloaded Anarchy.zip, the bot itself is set up!
+► Configure the bot by double clicking the _Anarchy.ahk file and hitting "Apply settings" after selecting the settings you want.
+► Client language MUST BE ENGLISH!!!
+► Set your League client size to 1280x720
+► Start the _Test-Dummy.ahk file, applying the settings and enter a 5v5 custom game with 9 other bots. After clicking "Start Playing" the bot should start to play.
+
+The bot doesn't play?
+Apply all the settings either in the _Test-Dummy GUI or _Anarchy GUI, make sure you know where your League of Legends is installed and hit "change folder" to let the bot
+know where to apply its ingame settings. The League Game-Window should be 160x90 pixels in size (incredibly small).
+Go into a lobby and compare sampleimage.png to your client, do they look the same?
+
+The bot plays?
+Exit the custom game, you only need to start the _Anarchy.ahk file now, League of Legends does not need to be open to start, the bot closes all instances of it anyways.
+
+
+[ BOT CONFIGURATION - CONFIG.INI]
+
+► Click the _Anarchy.ahk file to open the config GUI OR Open the config.ini file.
+
+
+[section1]
+username1 ► Here you enter the username which the bot uses in the RIOT CLIENT to log into the account.
+password1 ► Here you enter a password that matches with username1 to log into an account.
+username2 ► See the above ↑
+password2 ► See the above ↑
+accountCount ► This stays at 2 unless you modify the bot, to add more accounts simply add "username3=", "password3=" and set accountCount=3 (add as many as you want),
+	       the bot rotates through them in order, only one account will be in use at a time.
+azerty ► If you use the bot on a machine that has an AZERTY (French) keyboard layout instead of a QWERTY/QWERTZ keyboard, set this option to 1 or check it in the GUI!
+
+
+[section2]
+Yuumi ► enter 0 (= No) or 1 (= Yes), this tells the bot that it can pick Yuumi on all accounts (= The account(s) own this champion).
+Teemo ► enter 0 (= No) or 1 (= Yes), this tells the bot that it can pick Teemo on all accounts (= The account(s) own this champion).
+Taric ► enter 0 (= No) or 1 (= Yes), this tells the bot that it can pick Taric on all accounts (= The account(s) own this champion).
+Sona ► enter 0 (= No) or 1 (= Yes), this tells the bot that it can pick Sona on all accounts (= The account(s) own this champion).
+Soraka ► enter 0 (= No) or 1 (= Yes), this tells the bot that it can pick Sona on all accounts (= The account(s) own this champion).
+
+
+[section3]
+gamemode ► 1 (Ranked Solo/Duo), 2 (Ranked Flex), 3 (Normal Blindpick), 4 (Intro Bots)
+
+
+[section4]
+mode ► (here you can limit the time the bot plays daily/per account) enter either 1 or 2, 1 means that the bot will take "starttime" and "stoptime" into account when considering
+       to play another game. 2 Means that the bot will play for the amount of time entered under "timeperaccountinminutes".
+timeperaccountinminutes ► ONLY IMPORTANT IF MODE IS 2, enter a number here which will tell the bot how much time it can play on each account before switching to the other acc.
+sleeptimeafterswitch ► Amount of time (in minutes) the bot will sleep after being done playing on one account.
+sleeptimebetweenmatch ► Amount of time (in minutes) the bot will sleep after finishing a game of League of Legends.
+starttime ► ONLY IMPORTANT IF MODE IS 1, enter a daytime (FORMAT: HHMMSS, H=Hours, M=Minutes, S=Seconds ► 8am = 080000)
+stoptime ► ONLY IMPORTANT IF MODE IS 1, enter a daytime (FORMAT: HHMMSS, H=Hours, M=Minutes, S=Seconds ► 8:30pm = 163000)
+
+The bot will be allowed to play in the timespan which is between starttime and stoptime (local time! This span can go beyond the date limit or 0:00;
+for example startime = 230000 (23:00, 11pm) and stoptime = 090000 (09:00, 9am) and after 09:00 has passed, it will sleep until 23:00 and then play on the other account)
+
+inting ► The bot runs down mid (only do this in bot games).
+randomsummoners ► Enter 0 (= no) or 1 (= yes); Tells the bot to pick random summoner spells every game.
+randomrunes ► Enter 0 (= no) or 1 (= yes); Tells the bot to pick a random rune page every game.
+randomchat ► Enter 0 (= no) or 1 (= yes); Tells the bot to send random chat messages before, during and after the game (messages can be edited in chat.ini)
+buffergames ► Enter 0 (= no) or 1 (= yes); IMPORTANT SETTING!!! Tells the bot to play 2-5 games of the mode set in [section3],
+	      the bot will switch to intro bot games and play 2-5 games there, then switch back to the original gamemode. This really helps against troll/inting bans (ranked).
+prioritypick ► Enter one champion name from [section2] in lowercase letters (e.g.: yuumi); Tells the bot to always pick that champion if it is available.
+
+
+
+
+[ BOT CONFIGURATION - CHAT.INI, ONLY RELEVANT IF "RANDOM CHAT MESSAGES" ARE ENABLED! ]
+
+Open the chat.ini file.
+There are indexes (1,2,3..) and messages in the file, divided into 3 sections.
+
+Section1 ► Messages to be sent in champ select.
+Section3 ► Messages to be sent while ingame.
+Section5 ► Messages to be sent in the post game lobby.
+
+You may add or modify the messages as you like, to add additional messages (let's say there is 10 messages already in section5) do this:
+
+11=GG EZ
+12=Next time, we win!
+13=...
+.
+.
+
+
+
+
+[ TROUBLESHOOTING ]
+
+► If the target ally (which the bot follows all game except when that ally is dead) goes afk,
+  the bot will stay on that ally and will get leaverbuster but it can deal with leaverbuster popups in the client and continue running.
+► DO NOT ENTER NEGATIVE NUMBERS IN THE CONFIG.INI FILE OR GUI.
+► Test if the League shortcut file in this folder works, if it does not work, navigate to your League of Legends installation folder, create a shortcut of LeagueClient.exe
+  and put it into the bot's folder, named "shortcut".
+► The League client is a buggy mess and sometimes the bot will fail to navigate it, this can lead to queue lockout timers in rare scenarios if the client lags out.
+► Visit our Website for more information. https://anarchybot.wixsite.com/info
+► Subscribe to the Official Youtube Channel for updates and guides! https://www.youtube.com/channel/UCb948ycty7cDeFO8xnCvZrQ
+► If the shortcut doesn't work run League of Legends manually via the Riot Client, log into an account and exit. Now go to C:\Riot Games\League of Legends and
+  make a shortcut using the LeagueClient.exe file. Rename this file to "shortcut" and paste it into the bot's folder.
+► It is a known issue of the League Client to get stuck on low-end machines.
+
+LEAGUE OF LEGENDS IS A REGISTERED TRADEMARK OF RIOT GAMES, INC. WE ARE IN NO WAY AFFILIATED WITH, ASSOCIATED WITH OR ENDORSED BY RIOT GAMES, INC.
+BY USING THIS SERVICE YOU TAKE FULL RESPONSABILITY FOR THE OPERATION, FUNCTIONALITY AND POTENTIAL DAMAGES CAUSED BY IT.
