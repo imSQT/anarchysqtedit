@@ -22,28 +22,28 @@ TeemoExplore(side, ChampIndex)
 	LoopCount:=LoopRandom(15)
 	loop, %LoopCount%
 	{
-		PixelSearch, xx, xy, 154-ChampIndex*6, 58, 154-ChampIndex*6, 58, 0x8b8c8b, 20, Fast RGB ;check if allyX is dead
+		PixelSearch, xx, xy, 637-ChampIndex*24, 237, 637-ChampIndex*24, 237, 0x424142, 20, Fast RGB ;check if allyX is dead
 		if ErrorLevel=0
 		{
 			break
 		}
-		PixelSearch, ax, bx, 0, 0, 133, 78, 0x3E0700,, Fast, RGB
+		PixelSearch, ax, bx, 0, 0, 534, 313, 0x3E0700,, Fast, RGB ;need to find what this checks
 		if ErrorLevel=0
 		{
 			break
 		}
-		PixelSearch, ax, bx, 83, 87, 75, 87, 0x010d07, 10, Fast RGB
+		PixelSearch, ax, bx, 301, 349, 334, 351, 0x010d07, 10, Fast RGB ;checks something in the health bar
 		if ErrorLevel=0
 		{
 			break
 		}
 		if side=1
 		{
-			RandomClickR(85, 40)
+			RandomClickR(85, 40) ;resolution/2
 		}
 		Else
 		{
-			RandomClickR(75, 50)
+			RandomClickR(75, 50) ;
 		}
 		SleepRandom(200)
 		send aq
@@ -54,12 +54,12 @@ TeemoExplore(side, ChampIndex)
 
 TeemoAttack()
 {
-	PixelSearch, ax, bx, 80, 87, 75, 87, 0x010d07, 10, Fast RGB ;check own HP
+	PixelSearch, ax, bx, 296, 349, 325, 351, 0x010d07, 10, Fast RGB ;check own HP
 	if ErrorLevel=0
 	{
 		return
 	}
-	RandomClickR(80, 45)
+	RandomClickR(320, 180) ;resolution/2
 	SleepRandom(100)
 	send q4
 	return
@@ -69,7 +69,7 @@ TeemoLogic(side, ChampIndex, gametime)
 {
 	Target:="f"5-ChampIndex
 	send {%Target% down} ;centers camera on teammate to follow
-	PixelSearch, ax, bx, 78, 87, 75, 87, 0x010d07, 10, Fast RGB 
+	PixelSearch, ax, bx, 315, 350, 315, 350, 0x010d07, 10, Fast RGB ;lowHP check
 	if ErrorLevel=0
 	{
 		RecallChannel:=TeemoRetreat(side, RecallChannel)
@@ -101,11 +101,11 @@ TeemoRetreat(side, RecallChannel)
 	send wdf
 	if side=1
 	{
-		IngameHumanClickR(136, 87) ;clicks blue fountain on the map
+		IngameHumanClickR(543, 350) ;clicks blue fountain on the map
 	}
 	if side=2
 	{
-		IngameHumanClickR(158, 66) ;clicks red fountain on the map
+		IngameHumanClickR(632, 262) ;clicks red fountain on the map
 	}
 	SleepRandom(100)
 	return RecallChannel+1 ;increase recall score...
@@ -120,7 +120,7 @@ AttemptShoppingTeemo()
 	{
 		return ;ends function early if the game ended
 	}
-	PixelSearch, ax, by, 0, 0, 160, 90, 0x705729,, Fast RGB ;checking for opened shop window
+	PixelSearch, ax, by, 0, 0, 640, 360, 0x705729,, Fast RGB ;checking for opened shop window
 	if ErrorLevel=0
 	{
 		send {Escape} ;closing shop if shop window exists
