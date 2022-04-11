@@ -6,3 +6,5 @@ Need to update:
 - Taric Module
 
 I need to take a look at _Anarchy.ahk line 1132
+
+REPLACE THE CONFIG FILES WITH THE ONES FROM DISCORD
