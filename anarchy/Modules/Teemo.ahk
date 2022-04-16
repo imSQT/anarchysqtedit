@@ -39,11 +39,11 @@ TeemoExplore(side, ChampIndex)
 		}
 		if side=1
 		{
-			RandomClickR(85, 40) ;resolution/2
+			RandomClickR(320, 180) ;resolution/2
 		}
 		Else
 		{
-			RandomClickR(75, 50) ;
+			RandomClickR(300, 200) ;
 		}
 		SleepRandom(200)
 		send aq
@@ -87,7 +87,7 @@ TeemoLogic(side, ChampIndex, gametime)
 	{
 		RecallChannel=0
 		send qwr
-		HumanClickR(80, 45)
+		HumanClickR(300, 200)
 		SleepRandom(50)
 		send ^r^w^e^q
 		send {%Target% up}
