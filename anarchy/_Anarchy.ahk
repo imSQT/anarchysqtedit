@@ -1125,7 +1125,6 @@ BotInt(side)
 
 BotRecall()
 {
-	GamestepDisplay("Recalling...")
 	send b ;begin channeling recall
 	loop, 32
 	{
@@ -1141,7 +1140,6 @@ BotRecall()
 	}
 	SleepRandom(1000)
 	return 1 ;return success value
-	GamestepDisplay("Ingame - Playing")
 }
 
 
@@ -1659,7 +1657,7 @@ loop
 ;-------------------------------------------------------------------------------------------------------------;
 
 	aftergame:
-	sleep 25000
+	sleep 15000 ;originally 25000
 	loop, 20
 	{
 		WinActivate, League of Legends ahk_exe LeagueClientUx.exe
