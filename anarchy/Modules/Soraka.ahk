@@ -12,7 +12,7 @@ InitialSpellLevelSoraka()
 	AttemptShoppingSoraka()
 }
 
-SorakaExplore(side, ChampIndex)
+SorakaExplore(side, ChampIndex) ;CORRECTED
 {
 	send {Space up} ;key resetting
 	Target:="f"5-ChampIndex
@@ -22,22 +22,22 @@ SorakaExplore(side, ChampIndex)
 	LoopCount:=LoopRandom(8)
 	loop, %LoopCount%
 	{
-		PixelSearch, xx, xy, 154-ChampIndex*6, 58, 154-ChampIndex*6, 58, 0x8b8c8b, 20, Fast RGB ;check if allyX is dead
+		PixelSearch, xx, xy, 637-ChampIndex*24, 237, 637-ChampIndex*24, 237, 0x424142, 20, Fast RGB ;check if allyX is dead
 		if ErrorLevel=0
 		{
 			break
 		}
-		PixelSearch, ax, bx, 0, 0, 133, 78, 0x3E0700,, Fast, RGB ;check for enemies on screen
+		PixelSearch, ax, bx, 0, 0, 534, 316, 0x340300,, Fast, RGB ;check for enemies on screen
 		if ErrorLevel=0
 		{
 			break
 		}
-		PixelSearch, ax, bx, 83, 87, 75, 87, 0x010d07, 10, Fast RGB ;check own HP
+		PixelSearch, ax, bx, 332, 350, 314, 350, 0x010d07, 10, Fast RGB ;check own HP
 		if ErrorLevel=0
 		{
 			break
 		}
-		RandomClickR(80, 45) ;wander around
+		RandomClickR(320, 180) ;wander around, resolution/2
 		SleepRandom(200)
 		send aq ;attack nearest + press Q
 	}
@@ -45,24 +45,24 @@ SorakaExplore(side, ChampIndex)
 	return
 }
 
-SorakaAttack()
+SorakaAttack() ;CORRECTED
 {
-	PixelSearch, ax, bx, 80, 87, 75, 87, 0x010d07, 10, Fast RGB
+	PixelSearch, ax, bx, 330, 350, 314, 350, 0x010d07, 10, Fast RGB
 	if ErrorLevel=0
 	{
 		return
 	}
-	RandomClickL(80, 45) ;clicks in a Random spot within a 10x10 Area around the Pixel(80, 45) and presses Q + activates trinket
+	RandomClickL(320, 180) ;clicks in a Random spot within a 10x10 Area around the Pixel(320, 180) and presses Q + activates trinket
 	SleepRandom(100)
 	send q4
 	return
 }
 
-SorakaLogic(side, ChampIndex, gametime)
+SorakaLogic(side, ChampIndex, gametime) ;
 {
 	Target:="f"5-ChampIndex
 	send {%Target% down} ;centers camera on teammate to follow
-	PixelSearch, ax, bx, 78, 87, 75, 87, 0x010d07, 10, Fast RGB ;checks for own HP specifically if below 65% HP
+	PixelSearch, ax, bx, 316, 349, 317, 351, 0x010d07, 10, Fast RGB ;checks for own HP specifically if below 65% HP
 	if ErrorLevel=0
 	{
 		RecallChannel:=SonaRetreat(side, RecallChannel) ;increase recall score every time the bot clicks to base to recall
@@ -79,13 +79,13 @@ SorakaLogic(side, ChampIndex, gametime)
 	Else
 	{
 		RecallChannel=0 ;resets Recall score
-		HumanClickR(80, 45) ;camera centered on target ally, movement click
+		HumanClickR(320, 180) ;camera centered on target ally, movement click
 		SleepRandom(50)
-		PixelSearch, xx, xy, 157-ChampIndex*6, 62, 157-ChampIndex*6, 62, 0x131313,, Fast RGB ;checks if ally lost hp
+		PixelSearch, xx, xy, 634-ChampIndex*24, 247, 634-ChampIndex*24, 247, 0x131313,, Fast RGB ;checks if ally lost hp
 		if ErrorLevel=0
 		{
 			send r ;use ult if ally is low
-			MouseMove, 155-ChampIndex*6, 60 ;target ally
+			MouseMove, 627-ChampIndex*24, 237 ;target ally
 			SleepRandom(100)
 			send w ;press w to heal said ally
 		}
@@ -96,16 +96,16 @@ SorakaLogic(side, ChampIndex, gametime)
 	Return
 }
 
-SorakaRetreat(side, RecallChannel) ;function to retreat to base
+SorakaRetreat(side, RecallChannel) ;function to retreat to base CORRECTED
 {
 	send rdf ;using spells
 	if side=1
 	{
-		IngameHumanClickR(136, 87) ;clicks blue fountain on the map
+		IngameHumanClickR(543, 350) ;clicks blue fountain on the map
 	}
 	if side=2
 	{
-		IngameHumanClickR(158, 66) ;clicks red fountain on the map
+		IngameHumanClickR(632, 262) ;clicks red fountain on the map
 	}
 	SleepRandom(100)
 	return RecallChannel+1 ;increase recall score...
@@ -113,14 +113,14 @@ SorakaRetreat(side, RecallChannel) ;function to retreat to base
 
 Global SorakaitemsBought=0
 
-AttemptShoppingSoraka()
+AttemptShoppingSoraka() ;CORRECTED
 {
 
 	if not WinExist("League of Legends (TM)")
 	{
 		return ;ends function early if the game ended
 	}
-	PixelSearch, ax, by, 0, 0, 160, 90, 0x705729,, Fast RGB ;checking for opened shop window
+	PixelSearch, ax, by, 0, 0, 640, 360, 0x705729,, Fast RGB ;checking for opened shop window
 	if ErrorLevel=0
 	{
 		send {Escape} ;closing shop if shop window exists
