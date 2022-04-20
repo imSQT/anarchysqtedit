@@ -65,6 +65,16 @@ TeemoAttack()
 	return
 }
 
+TeemoSurrender()
+{
+	PixelSearch,,, 568, 181, 572,185, 0x151C1E, 10, Fast RGB ;checks if there is ff window
+	if ErrorLevel=0
+	{
+		RandomClickL(584,206)
+	}
+	sleep 20000
+}
+
 TeemoLogic(side, ChampIndex, gametime)
 {
 	Target:="f"5-ChampIndex

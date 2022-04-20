@@ -23,11 +23,21 @@ YuumiAttack() ;CORRECTED
 	PixelSearch, ax, ay, 290, 336, 290, 336, 0x1061B7, 10, Fast RGB
 	if ErrorLevel=0
 	{
-		RandomClickL(80, 45)
+		RandomClickL(320, 180)
 		SleepRandom(100)
 		send r4q
 		return
 	}
+}
+
+YuumiSurrender()
+{
+	PixelSearch,,, 568, 181, 572,185, 0x151C1E, 10, Fast RGB ;checks if there is ff window
+	if ErrorLevel=0
+	{
+		RandomClickL(584,206)
+	}
+	sleep 20000
 }
 
 YuumiLogic(side, ChampIndex, gametime) ;CORRECTED
