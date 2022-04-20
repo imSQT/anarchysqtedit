@@ -72,7 +72,7 @@ TeemoSurrender()
 	{
 		RandomClickL(584,206)
 	}
-	sleep 20000
+	sleep 10000
 }
 
 TeemoLogic(side, ChampIndex, gametime)

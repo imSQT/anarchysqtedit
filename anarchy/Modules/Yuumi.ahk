@@ -37,7 +37,7 @@ YuumiSurrender()
 	{
 		RandomClickL(584,206)
 	}
-	sleep 20000
+	sleep 10000
 }
 
 YuumiLogic(side, ChampIndex, gametime) ;CORRECTED
