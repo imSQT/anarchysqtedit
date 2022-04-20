@@ -66,7 +66,7 @@ Gui, Add, Button, default, Apply Settings
 Gui, Add, Button, default yp x+5, Reset to default
 Gui, Add, Button, default yp x+5, Start Bot
 Gui, Add, Button, default yp x+5, Support
-
+;this is a marker to show 同性恋#2272 edited this and it should not be sold, if you paid for this, you have been scammed
 Gui, Add, Tab3, xm+1 y+15 w400 h580, Accounts|Champions|Gamemode|Gameplay
 Gui, Tab, 1
 Gui, Add, Text,, Username1:
@@ -223,7 +223,7 @@ Gui, Add, Text,, 1
 Gui, Add, Slider, yp x+5 vregulargames w200 Range1-10 ToolTipLeft ToolTipRight TickInterval1, 5
 GuiControl,, regulargames, %regulargames%
 Gui, Add, Text, yp x+5, 10
-
+;this is a marker to show 同性恋#2272 edited this and it should not be sold, if you paid for this, you have been scammed
 
 Gui, Add, Text, xm+12 y+40, Prioritize Champion:
 if prioritypick=sona
@@ -409,7 +409,7 @@ Reload
 return
 ButtonSupport:
 run, https://discord.gg/PzNE793wHb
-
+;this is a marker to show 同性恋#2272 edited this and it should not be sold, if you paid for this, you have been scammed
 ;-----------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
@@ -583,7 +583,7 @@ CleanPopups()
 	return
 }
 
-
+;this is a marker to show 同性恋#2272 edited this and it should not be sold, if you paid for this, you have been scammed
 RankedtoBotQueue(index, ByRef bots, ByRef game)
 {
 	game=0
@@ -875,7 +875,7 @@ SwitchAccount(index, ByRef bots, ByRef game)
 	return
 }
 
-
+;this is a marker to show 同性恋#2272 edited this and it should not be sold, if you paid for this, you have been scammed
 PickChampion()
 {
 	GamestepDisplay("Picking Champion")
@@ -974,7 +974,7 @@ PickChampion()
     }
 }
 
-
+;this is a marker to show 同性恋#2272 edited this and it should not be sold, if you paid for this, you have been scammed
 GameDisconnectCheck(byRef GameDisconnect)
 {
 	PixelSearch, axx, byy, 71, 38, 71, 38, 0x59401f, 3, Fast RGB
@@ -1163,7 +1163,7 @@ GamestepDisplay(gamestepmessage)
     return
 }
 
-
+;this is a marker to show 同性恋#2272 edited this and it should not be sold, if you paid for this, you have been scammed
 ChampionDisplay(championmessage)
 {
     if not (championmessage=0)
@@ -1309,7 +1309,7 @@ bottimepass=0
 Account=1
 SwitchAccount(Account, bots, game)
 botstart:=A_TickCount
-
+;this is a marker to show 同性恋#2272 edited this and it should not be sold, if you paid for this, you have been scammed
 loop
 {
 	startqueue:
@@ -1524,7 +1524,7 @@ loop
 		}
 	}
 
-
+;this is a marker to show 同性恋#2272 edited this and it should not be sold, if you paid for this, you have been scammed
 ;----------------------------------------------------------------------------------------------------------------------------------;
 
 	ingame:
@@ -1657,7 +1657,7 @@ loop
 		}
 	}
 
-
+;this is a marker to show 同性恋#2272 edited this and it should not be sold, if you paid for this, you have been scammed
 ;-------------------------------------------------------------------------------------------------------------;
 
 	aftergame:
