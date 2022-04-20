@@ -75,7 +75,7 @@ SorakaLogic(side, ChampIndex, gametime) ;
 	PixelSearch, ax, bx, 316, 349, 317, 351, 0x010d07, 10, Fast RGB ;checks for own HP specifically if below 65% HP
 	if ErrorLevel=0
 	{
-		RecallChannel:=SonaRetreat(side, RecallChannel) ;increase recall score every time the bot clicks to base to recall
+		RecallChannel:=SorakaRetreat(side, RecallChannel) ;increase recall score every time the bot clicks to base to recall
 		if RecallChannel>=25
 		{
 			RecallChannel=0
