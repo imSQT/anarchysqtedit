@@ -65,7 +65,7 @@ IniRead, regulargames, config.ini, section5, regulargames
 Gui, Add, Button, default, Apply Settings
 Gui, Add, Button, default yp x+5, Reset to default
 Gui, Add, Button, default yp x+5, Start Bot
-Gui, Add, Button, default yp x+5, Official Website
+Gui, Add, Button, default yp x+5, Support
 
 Gui, Add, Tab3, xm+1 y+15 w400 h580, Accounts|Champions|Gamemode|Gameplay
 Gui, Tab, 1
@@ -407,9 +407,8 @@ IniWrite, 5, config.ini, section5, fillgames
 IniWrite, 5, config.ini, section5, regulargames
 Reload
 return
-ButtonOfficialWebsite:
-run, https://anarchybot.wixsite.com/info
-return
+ButtonSupport:
+run, https://discord.gg/PzNE793wHb
 
 ;-----------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -1128,7 +1127,7 @@ BotRecall()
 	send b ;begin channeling recall
 	loop, 32
 	{
-		PixelSearch, ax, bx, 65, 87, 70, 87, 0x010d07, 10, Fast RGB ;check if very low / dead
+		PixelSearch, ax, bx, 260, 349, 282, 351, 0x010d07, 10, Fast RGB ;check if very low / dead
 		if ErrorLevel=0
 		{
 			return 0 ;cancel recall
@@ -1611,6 +1610,11 @@ loop
 				goto, aftergame
 			}
 
+			if ingametime_m=16 or ingametime_m=19 or ingametime_m=22 or ingametime_m=25 or ingametime_m=28
+			{
+				%PickedChampion%Surrender()
+			}
+
 			if ingametime_m>=20
 			{
 				ChampIndex=1 ; 0=adc 1=mid 2=jg 3=top
@@ -1657,7 +1661,7 @@ loop
 ;-------------------------------------------------------------------------------------------------------------;
 
 	aftergame:
-	sleep 15000 ;originally 25000
+	sleep 13000 ;originally 25000
 	loop, 20
 	{
 		WinActivate, League of Legends ahk_exe LeagueClientUx.exe
