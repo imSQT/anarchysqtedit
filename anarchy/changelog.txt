@@ -1,12 +1,20 @@
-[2.3]
+PATCH 12.8
+- updated search area to fix bug that caused bot to restart when it failed to find the "find match" button
 
+
+
+As of 2.3, official support has been discontinued. Further work on the project will be done by sqt. Changelogs will be organized into patch fixes and small changes within.
+------------------------------------------------------------------------------------
+
+
+
+[2.3]
 ► Bot no longer ints in bot games, that will finish them quicker and look better in the match history. It was a false assumption that Riot looks at KD change between games when
   rolling out automatic 14 day bans.
 ► AccountCount option now updates in the .ini file when hitting "Start bot" (previously only saved when hitting "Apply settings").
 ► Updated Instruction Manual.
 
 [2.2]
-
 ► Fixed a bug where the bot would be stuck in the post game lobby after failing to click "Play again".
 ► Fixed some gold values in the shop function, it is advised not to run random runes currently because of things like magical footwear making boots unable to be purchased early.
 ► https://www.sendbig.com/view-files?Id=d9a7d93d-d7f3-4e2f-6529-bea1bb5b7658 This is a link to a downloadable Virtual Machine (Vmware only) packed in a 8GB large zip
@@ -18,9 +26,7 @@
 ► Fixed the bot getting stuck at "ingame - playing" despite the game having long ended (again).
 ► Fixed a bug where Yuumi would (in rare situations) detach for no reason.
 
-
 [2.1]
-
 ► Adding more stuff being displayed in the "console" background window, such as login steps and popup removal information.
 ► Reversed the optimization for image searching from 2.0 and instead changed the order in which images are searched for, starting with closing and then clicking "ok" images.
 ► Greatly improved the shop function, the bot now has a list of items & part items and purchases them as it attempts to shop while taking current gold into account.
@@ -28,13 +34,10 @@
 ► Fixed a bug that would get the bot stuck because of a potentially infinite ingame loop without a check for game-end.
 
 [2.0]
-
 ► Fixing the AccountSwitch function to match the new client
 ► Optimizing the function responsable for closing popups (it now starts searching in the TOP RIGHT corner instead of top left to close windows rather than hitting "OK" on them)
 
-
 [1.3]
-
 ► Turned down the sensitivity for detecting enemies on screen when the bot considers to do an attack with the %PickedChampion%Attack function, this may result in some random ults / moves sometimes.
 ► Decreased sensitivity for bot detecting its own HP and running back to base, the bot needs to take more damage now in order to make the decision to return to base - more uptime, slightly riskier.
 ► Optimizing imagesearch when in queue for guaranteed click on "accept match"
@@ -44,10 +47,7 @@
 ► You can now configure in the GUI how many accounts you want to bot with the same bot instance. However if using more than 2, you must add the account details manually in the config.ini file (only for advanced users)!
 ► The bot now checks for a valid config.ini file and gives proper instructions if the file is not present.
 
-
-
 [1.2]
-
 ► Removed the beep noise when the bot starts itself or enters queue, it was just a developer feature to test if certain parts of the code worked.
 ► Bot no longer "explores" when targeted ally champion is dead or dies during the explore function.
 ► Heals (Sona, Taric, Yuumi) will be cast on cooldown after 15 minutes to generate more assists/KD.
@@ -55,10 +55,7 @@
 ► Fixed some exploration behavior on some champions (Taric no longer ults seemingly at random when exploring)
 ► Removed both .exe files as they were causing some false positives on a virus check, it is now required to install autohotkey in order to use the bot.
 
-
-
 [1.1]
-
 ► Fixed an issue in champ select where the bot would get popups "There was an error selecting your champion", the bot can now close them and continue playing.
 ► Added a new champion-specific gameplay function (example: TeemoExplore), the bot sometimes wanders off for a short time on its own until it encounters enemies or gets hurt.
 ► Bot not longer forces itself to attack if running away/low HP, previously this would lead the bot running away and suddenly running in the wrong direction for a split second.
