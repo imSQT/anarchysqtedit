@@ -628,7 +628,7 @@ RankedtoBotQueue(index, ByRef bots, ByRef game)
 
 	MouseMove, 0, 0
 	SleepRandom(2500)
-    PixelSearch, ei, fi, 530, 656, 530, 656, 0x18838b, 10, Fast RGB
+    PixelSearch, ei, fi, 456, 658, 601, 659, 0x18838b, 10, Fast RGB
 	if ErrorLevel=0
 	{
 		return
@@ -861,7 +861,7 @@ SwitchAccount(index, ByRef bots, ByRef game)
 	}
 	MouseMove, 0, 0
 	SleepRandom(2500)
-    PixelSearch, ei, fi, 530, 656, 530, 656, 0x18838b, 10, Fast RGB
+    PixelSearch, ei, fi, 456, 658, 601, 659, 0x18838b, 10, Fast RGB
 	if ErrorLevel=0
 	{
 		return
@@ -1316,7 +1316,7 @@ loop
 	WinActivate, League of Legends ahk_exe LeagueClientUx.exe
 	loop
 	{
-		PixelSearch, ei, fi, 530, 656, 530, 656, 0x18838b, 10, Fast RGB
+		PixelSearch, ei, fi, 456, 658, 601, 659, 0x18838b, 10, Fast RGB
 		if ErrorLevel=0
 		{
 			HumanClickL(540, 680)
@@ -1359,7 +1359,7 @@ loop
 			SleepRandom(2000)
 		}
 		send {Space}
-		PixelSearch, ei, fi, 530, 656, 530, 656, 0x18838b, 10, Fast RGB
+		PixelSearch, ei, fi, 456, 658, 601, 659, 0x18838b, 10, Fast RGB
 		if ErrorLevel=0
 		{
 			goto, startqueue
