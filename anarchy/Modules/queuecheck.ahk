@@ -12,13 +12,13 @@ QueueCheck()
 {
     MouseMove, 0, 0
     sleep 50
-    PixelSearch, ei, fi, 530, 656, 530, 656, 0x18838b, 10, Fast RGB
+    PixelSearch, ei, fi, 456, 658, 601, 659, 0x18838b, 10, Fast RGB
     if ErrorLevel=0
     {
         return 2
     }
     sleep 50
-    PixelSearch, ci, di, 530, 656, 530, 656, 0x5b5a56, 10, Fast RGB
+    PixelSearch, ci, di, 456, 658, 601, 659, 0x5b5a56, 10, Fast RGB
     if ErrorLevel=0
 	{
         return 1
