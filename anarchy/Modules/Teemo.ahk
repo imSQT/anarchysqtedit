@@ -109,10 +109,22 @@ TeemoRetreat(side, RecallChannel)
 	if side=1
 	{
 		IngameHumanClickR(543, 350) ;clicks blue fountain on the map
+		PixelSearch, fx, fy, 568, 181, 572,185, 0x151C1E, 10, Fast RGB ;checks if there is ff window
+		if ErrorLevel=0
+		{
+			IngameHumanClickL(584,206)
+			Sleep 1000
+		}
 	}
 	if side=2
 	{
 		IngameHumanClickR(632, 262) ;clicks red fountain on the map
+		PixelSearch, fx, fy, 568, 181, 572,185, 0x151C1E, 10, Fast RGB ;checks if there is ff window
+		if ErrorLevel=0
+		{
+			IngameHumanClickL(584,206)
+			Sleep 1000
+		}
 	}
 	SleepRandom(100)
 	return RecallChannel+1 ;increase recall score...
