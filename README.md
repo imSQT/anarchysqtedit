@@ -10,7 +10,7 @@ changes as of 5/10/22
 - REPLACED ff vote from below with new test
     - yuumi (76)
     - teemo (73)
-    - soraka
+    - soraka (67)
 
 changes as of 4/19/22
 - added experimental ff search (testing atm)
