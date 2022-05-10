@@ -76,7 +76,8 @@ YuumiLogic(side, ChampIndex, gametime) ;CORRECTED
 			PixelSearch, fx, fy, 568, 181, 572,185, 0x151C1E, 10, Fast RGB ;checks if there is ff window
 			if ErrorLevel=0
 			{
-				RandomClickL(584,206)
+				IngameHumanClickL(584,206)
+				Sleep 300
 			}
 			send ^r^e^w^q
 			send {%Target% up}

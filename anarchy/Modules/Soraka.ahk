@@ -66,7 +66,8 @@ SorakaLogic(side, ChampIndex, gametime) ;
 	PixelSearch, fx, fy, 568, 181, 572,185, 0x151C1E, 10, Fast RGB ;checks if there is ff window
 	if ErrorLevel=0
 	{
-		RandomClickL(584,206)
+		IngameHumanClickL(584,206)
+		Sleep 300
 	}
 	PixelSearch, ax, bx, 316, 349, 317, 351, 0x010d07, 10, Fast RGB ;checks for own HP specifically if below 65% HP
 	if ErrorLevel=0

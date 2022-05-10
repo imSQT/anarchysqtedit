@@ -73,7 +73,8 @@ TeemoLogic(side, ChampIndex, gametime)
 	PixelSearch, fx, fy, 568, 181, 572,185, 0x151C1E, 10, Fast RGB ;checks if there is ff window
 	if ErrorLevel=0
 	{
-		RandomClickL(584,206)
+		IngameHumanClickL(584,206)
+		Sleep 300
 	}
 	PixelSearch, ax, bx, 315, 350, 315, 350, 0x010d07, 10, Fast RGB ;lowHP check
 	if ErrorLevel=0
