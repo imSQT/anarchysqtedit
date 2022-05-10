@@ -58,20 +58,16 @@ SorakaAttack() ;CORRECTED
 	return
 }
 
-SorakaSurrender()
-{
-	PixelSearch,,, 568, 181, 572,185, 0x151C1E, 10, Fast RGB ;checks if there is ff window
-	if ErrorLevel=0
-	{
-		RandomClickL(584,206)
-	}
-	sleep 10000
-}
 
 SorakaLogic(side, ChampIndex, gametime) ;
 {
 	Target:="f"5-ChampIndex
 	send {%Target% down} ;centers camera on teammate to follow
+	PixelSearch, fx, fy, 568, 181, 572,185, 0x151C1E, 10, Fast RGB ;checks if there is ff window
+	if ErrorLevel=0
+	{
+		RandomClickL(584,206)
+	}
 	PixelSearch, ax, bx, 316, 349, 317, 351, 0x010d07, 10, Fast RGB ;checks for own HP specifically if below 65% HP
 	if ErrorLevel=0
 	{

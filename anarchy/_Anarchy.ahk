@@ -1610,10 +1610,6 @@ loop
 				goto, aftergame
 			}
 
-			if ingametime_m=16 or ingametime_m=19 or ingametime_m=22 or ingametime_m=25 or ingametime_m=28
-			{
-				%PickedChampion%Surrender()
-			}
 
 			if ingametime_m>=20
 			{
