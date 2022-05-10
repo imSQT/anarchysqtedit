@@ -2,7 +2,7 @@
 IMPORTANT:
 - copy the config from this folder into your league folder (it has a problem sometimes where it will not copy over)
 
-Need to update:
+Need to update (DO NOT USE):
 - Sona Module
 - Taric Module
 
