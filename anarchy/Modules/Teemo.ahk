@@ -74,7 +74,7 @@ TeemoLogic(side, ChampIndex, gametime)
 	if ErrorLevel=0
 	{
 		IngameHumanClickL(584,206)
-		Sleep 300
+		Sleep 1000
 	}
 	PixelSearch, ax, bx, 315, 350, 315, 350, 0x010d07, 10, Fast RGB ;lowHP check
 	if ErrorLevel=0

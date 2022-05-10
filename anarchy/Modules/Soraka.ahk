@@ -67,7 +67,7 @@ SorakaLogic(side, ChampIndex, gametime) ;
 	if ErrorLevel=0
 	{
 		IngameHumanClickL(584,206)
-		Sleep 300
+		Sleep 1000
 	}
 	PixelSearch, ax, bx, 316, 349, 317, 351, 0x010d07, 10, Fast RGB ;checks for own HP specifically if below 65% HP
 	if ErrorLevel=0

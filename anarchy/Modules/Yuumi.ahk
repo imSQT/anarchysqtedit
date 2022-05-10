@@ -77,7 +77,7 @@ YuumiLogic(side, ChampIndex, gametime) ;CORRECTED
 			if ErrorLevel=0
 			{
 				IngameHumanClickL(584,206)
-				Sleep 300
+				Sleep 1000
 			}
 			send ^r^e^w^q
 			send {%Target% up}
