@@ -1,6 +1,7 @@
 # anarchy sqt edit
 IMPORTANT:
 - copy the config from this folder into your league folder (it has a problem sometimes where it will not copy over)
+- it looks like 12.9 will be a big ui update, its gonna take me some time to fix this sorry
 
 Need to update (DO NOT USE):
 - Sona Module
