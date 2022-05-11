@@ -1726,7 +1726,15 @@ loop
 		SleepRandom(2000)
 		CleanPopups()
 		SleepRandom(150)
-		PixelSearch, ei, fi, 470, 685, 625, 685, 0xA3C7C7,, Fast RGB
+		PixelSearch, ei, fi, 470, 685, 625, 685, 0xA3C7C7,, Fast RGB ;challenges menu
+		if ErrorLevel=0
+		{
+			SleepRandom(1000)
+			HumanClickL(540, 680)
+			SleepRandom(1000)
+			MouseMove, 0, 0
+		}
+		PixelSearch, ei, fi, 470, 685, 625, 685, 0xA3C7C7,, Fast RGB ;post game lobby
 		if ErrorLevel=0
 		{
 			if randomchat=1

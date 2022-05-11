@@ -1,9 +1,11 @@
+As of 2.3, official support has been discontinued. Further work on the project will be done by sqt. Changelogs will be organized into patch fixes and small changes within.
+
+PATCH 12.9
+- added extra search for challenges menu
+
+
 PATCH 12.8
 - updated search area to fix bug that caused bot to restart when it failed to find the "find match" button
-
-
-
-As of 2.3, official support has been discontinued. Further work on the project will be done by sqt. Changelogs will be organized into patch fixes and small changes within.
 ------------------------------------------------------------------------------------
 
 

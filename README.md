@@ -7,6 +7,9 @@ Need to update (DO NOT USE):
 - Sona Module
 - Taric Module
 
+changes as of 5/11/22
+- added extra search to go past challenges menu will need to test if colors were changed
+
 changes as of 5/10/22
 - REPLACED ff vote from below with new test
     - yuumi (76)
